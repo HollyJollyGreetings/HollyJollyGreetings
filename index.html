@@ -1,5 +1,104 @@
 <!DOCTYPE html>
-<html>
-<head><meta charset='UTF-8'><title>Holly Jolly Greetings</title></head>
-<body><h1>Holly Jolly Greetings</h1><p>Landing page content will go here.</p></body>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Holly Jolly Greetings</title>
+<style>
+body {
+  margin:0; padding:0;
+  font-family:'Segoe UI', Tahoma, sans-serif;
+  background:#fff6f6;
+  color:#2c2c2c;
+  overflow-x:hidden;
+}
+.snowflake {
+  position:fixed;
+  top:-10px;
+  color:white;
+  font-size:1.2rem;
+  user-select:none;
+  animation:fall linear infinite;
+  opacity:0.9;
+}
+@keyframes fall {
+  0% { transform:translateY(0); }
+  100% { transform:translateY(110vh); }
+}
+header {
+  background:url('https://images.unsplash.com/photo-1543589996-1b56c72a21f7?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+  height:260px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.logo-box {
+  background:rgba(255,255,255,0.92);
+  padding:22px 32px;
+  border-radius:14px;
+  box-shadow:0 4px 14px rgba(0,0,0,0.2);
+  text-align:center;
+}
+.logo-box h1 {
+  margin:0;
+  font-size:1.9rem;
+  color:#c21807;
+}
+section { padding:30px 20px; max-width:900px; margin:auto; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:15px; }
+.card { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.15); }
+.card img { width:100%; }
+.card-title { padding:10px; text-align:center; font-weight:600; }
+.contact-box { background:#fff; padding:20px; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15); }
+footer { text-align:center; padding:20px; font-size:0.9rem; color:#555; }
+</style>
+</head>
+<body>
+
+<div class="snowflake" style="left:10%; animation-duration:6s;">❄</div>
+<div class="snowflake" style="left:30%; animation-duration:8s;">❅</div>
+<div class="snowflake" style="left:50%; animation-duration:7s;">❆</div>
+<div class="snowflake" style="left:70%; animation-duration:9s;">❄</div>
+<div class="snowflake" style="left:90%; animation-duration:6.5s;">❅</div>
+
+<header>
+  <div class="logo-box">
+    <h1>🎄 Holly Jolly Greetings 🎄</h1>
+    <p>Festive Wishes • Christmas Cards • Holiday Cheer</p>
+  </div>
+</header>
+
+<section>
+  <h2>About Holly Jolly Greetings</h2>
+  <p>Welcome to Holly Jolly Greetings — your cozy corner for Christmas designs, warm wishes, festive wallpapers, and Pinterest‑ready holiday content.</p>
+</section>
+
+<section>
+  <h2>Preview Cards</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1607082349566-187botbcdaf?auto=format&fit=crop&w=600&q=60">
+      <div class="card-title">Merry Christmas</div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1544902522-1f5ede6c97f7?auto=format&fit=crop&w=600&q=60">
+      <div class="card-title">Holiday Blessings</div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1543877087-ebf71f9a128f?auto=format&fit=crop&w=600&q=60">
+      <div class="card-title">Festive Joy</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <div class="contact-box">
+    <p><b>Email:</b> hollyjollygreetings@yahoo.com</p>
+  </div>
+</section>
+
+<footer>© 2025 Holly Jolly Greetings — Spreading Christmas Cheer 🎅✨</footer>
+
+</body>
 </html>
