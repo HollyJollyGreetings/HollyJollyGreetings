@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holly Jolly Greetings</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+
+    .wrapper {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      position: relative;
+    }
+
+    /* ✨ Glowing Christmas Border */
+    .wrapper::before {
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      right: -6px;
+      bottom: -6px;
+      border-radius: 20px;
+      background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #ffd000,
+        #2bff00,
+        #00ffd5,
+        #0095ff,
+        #b300ff,
+        #ff00c8,
+        #ff0000
+      );
+      background-size: 400% 400%;
+      animation: glow 7s ease infinite;
+      z-index: -1;
+    }
+
+    @keyframes glow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .logo {
+      width: 200px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    /* 📩 Email Form */
+    form {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    button {
+      width: 100%;
+      background: #d62828;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #a61e1e;
+    }
+
+    /* ❄ Snowflakes */
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: white;
+      font-size: 18px;
+      animation: fall linear infinite;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-10px); }
+      100% { transform: translateY(110vh); }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ❄ Auto Snow Generator -->
+<script>
+  for (let i = 0; i < 50; i++) {
+    let snow = document.createElement("div");
+    snow.className = "snowflake";
+    snow.innerHTML = "❄";
+    snow.style.left = Math.random() * 100 + "vw";
+    snow.style.animationDuration = (4 + Math.random() * 6) + "s";
+    snow.style.opacity = Math.random();
+    snow.style.fontSize = (15 + Math.random() * 20) + "px";
+    document.body.appendChild(snow);
+  }
+</script>
+
+<!-- 🎵 Soft Christmas Music -->
+<audio autoplay loop>
+  <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Scott_Holmes_Music/Happy_Holidays/Scott_Holmes_Music_-_Happy_Holidays.mp3" type="audio/mpeg">
+</audio>
+
+  <div class="wrapper">
+
+    <!-- ⭐ Custom Logo Image -->
+    <img class="logo" src="A_festive_digital_graphic_design_showcases_a_landi.png" alt="Festive Logo" />
+
+    <h2>Join Our Christmas Mailing List 🎁</h2>
+
+    <!-- 📩 Working Email Signup Form -->
+    <form action="https://formsubmit.co/hollyjollygreetings@yahoo.com" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">Subscribe</button>
+    </form>
+
+  </div>
+
+</body>
+</html>
